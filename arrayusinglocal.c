@@ -21,41 +21,28 @@ void delete(int a[5],int *pos){
 	}
 	else{
 		int del=a[*pos];
-		printf("%d",del);
+		printf("Element deleted is %d",del);
 		a[(*pos)--];
 	}
 }
 
 void display(int a[5],int *pos){
 	int i;
-	for(i=0;i<*pos;i++){
-		printf("%d",a[i]);
+	for(i=0;i<=*pos;i++){
+		printf("%d\t",a[i]);
 	}
 }
 
-void sort(int a[5],int *pos){
-	int i,j;
-	printf("\nsorting");
-	for(i=0;i<*pos;i++){
-		for(j=i+1;j<*pos;j++){
-			if(a[i]>=a[j]){
-				int temp=a[i];
-				a[i]=a[j];
-				a[j]=temp;
-			}
-		}
-	}
-}
 int menu(){
 	int ch;
-	printf("\nInsert-1 \n Delete-2 \n Display-3 \n Sort -4\n  ");
+	printf("\nInsert-1 \n Delete-2 \n Display-3 \n Quit -4\n  ");
 	scanf("%d",&ch);
 	return ch;
 	
 }
 void process(int a[5],int *pos){
 	int choice,element;
-	for(choice=menu();choice!=5;choice=menu()){
+	for(choice=menu();choice!=4;choice=menu()){
 		switch(choice){
 			case 1:
 				printf("\nEnter the element to insert");
@@ -69,11 +56,9 @@ void process(int a[5],int *pos){
 		    	display(a,pos);
 				break;	
 			case 4:
-		    	sort(a,pos);
+		    	
 				break;
-			case 5:
-		
-				break;
+			
 				
 			default:
 			printf("Invlaid choice");						
