@@ -54,7 +54,7 @@ void display(){
 }
 void add(){
     int i,j; //declared variables for loop
-    if(row1==row1 && col1==col2){//loop which do the addition operation
+    if(row1 == row1 && col1 == col2){//loop which do the addition operation
         for(i=0;i<row1;i++){
             for(j=0;j<row2;j++){
                 result[i][j]= a[i][j] + b[i][j];
