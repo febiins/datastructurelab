@@ -1,4 +1,8 @@
-/*The program is for demonstrating storage classes. Author: @Febin Sunny date:26-07-2025*/ 
+/*
+The program is for demonstrating storage classes. 
+Author: @Febin Sunny 
+Date:26-07-2025
+*/ 
 #include<stdio.h>
 
 int a=10; //global variable

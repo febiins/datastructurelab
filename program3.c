@@ -1,4 +1,8 @@
-/*The program is for demonstrating array operations using local variables in a menu driven format. Author: @Febin Sunny date:26-07-2025*/ 
+/*
+The program is for demonstrating array operations using local variables in a menu driven format.
+ Author: @Febin Sunny 
+ Date:26-07-2025
+ */ 
 
 #include<stdio.h>
 
