@@ -25,7 +25,7 @@ void search(int x){//function to search an element in an array
 
     for(int i=0;i<n;i++){
         if(x==a[i]){
-            printf("%d is founded\n",a[i]);
+            printf("%d is founded at position %d \n",a[i],i);
         }
         
     }

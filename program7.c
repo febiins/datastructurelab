@@ -30,12 +30,36 @@ void display(int a[],int i, int pos){  //recursive function for printing array i
     }
 
 }
+int choice(){
+    int ch;
+    printf("\nEnter your choice 1.Insert 2.Display 3.Exit\n");
+    scanf("%d",&ch);
+    return ch;
+}
+void menu(){
+    int c,e;
+    for(c=choice();c!=3;c=choice()){
+        switch(c){
+            case 1: printf("Enter elements\n");
+            scanf("%d",&e);
+            insert(e);
+            break;
+            case 2: display(a,0,pos);
+            break;
+            case 3:
+            break;
+            default:
+            printf("Invalid choice");
+        }
+    }
+}
 
 int main(){
-    insert(5);  //inserting element
+   /* insert(5);  //inserting element
     insert(6);  //inserting element
     insert(3);  //inserting element
-    display(a,0,pos);  //calling recursive function
+    display(a,0,pos);  //calling recursive function*/
+    menu();
   
     return 0;
 }
