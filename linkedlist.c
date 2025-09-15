@@ -60,9 +60,24 @@ void deletion(){
    
 }
 
+void sort(){
+    node *t1,*t2;
+    int temp;
+    if(head==NULL){
+        printf("List is empty\n");
+        return;
+    }
+    for(t1=head;t1->next!=NULL;t1=t1->next){
+        for(t2=t1->next;t2!=NULL;t2=t2->next){
+            if(t1->data>t2->data){
+                temp=t1->data;
+                t1->data=t2->data;
+                t2->data=temp;
+            }
+        }
+    }
 
-
-
+}
 void display(){
     node *t;
     t=head;
@@ -79,12 +94,13 @@ void display(){
 
 
 int main(){
-    insert(5);
     insert(6);
-    insert(7);
-    insert(8);
+    insert(3);
+    insert(5);
+    insert(1);
+    deletion();
     display();
-    deletion(); 
+    sort(); 
     display();
     return 0;
 }
