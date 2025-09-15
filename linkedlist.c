@@ -28,49 +28,40 @@ void insert(int a){
     }
 }
 
-void insertatspecific(){
+
+
+
+
+void deletion(){
     node *t;
-    int value;
-    printf("Enter the value after which you want to insert\n");
-    scanf("%d",&value);
-    t=head;
-    while(t->data!=value){
-        t=t->next;
-    }
-    if(t==NULL){
-        printf("value not found\n");
-        return;
+    int a;
+    printf("Enter the element to delete\n");
+    scanf("%d",&a);
+    if(head==NULL){
+            printf("List is empty\n");
+        }
+    else if(head->data==a){
+        head=head->next;
+
     }
     else{
-        node* newnode;
-        newnode=(node*)malloc(sizeof(node));
-        printf("Enter the value to be inserted\n");
-        scanf("%d",&newnode->data);
-        newnode->next=t->next;
-        t->next=newnode;
+        t=head;
+        while(t->next!=NULL && t->next->data!=a){
+            t=t->next;
+        }
+        if(t->next==NULL){
+            printf("Element is not found\n");
+        }
+        else{
+            t->next=t->next->next;
+        }
+
     }
+   
 }
 
-void deletion_at_begining(){
-    node *t;
-    t=head;
-  
-    if(head==NULL){
-        printf("List is empty\n");
-        return;
-    }
-    head=t->next;
-}
 
-void deletion_at_end(){
-    node *t,*prev;
-    t=head;
-    while(t->next!=NULL){
-        prev=t;
-        t=t->next;
-    }
-    prev->next=NULL;
-}
+
 
 void display(){
     node *t;
@@ -93,9 +84,7 @@ int main(){
     insert(7);
     insert(8);
     display();
-    insertatspecific();
-    display();
-    deletion_at_end(); 
+    deletion(); 
     display();
     return 0;
 }
