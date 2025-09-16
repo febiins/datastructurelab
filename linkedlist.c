@@ -1,4 +1,4 @@
-/*insertion and deletion operations on linked list*/
+/*insertion,deletion,search and replace,sort,display,polynomial representation,count of node operations on linked list*/
 
 #include<stdio.h>
 #include<malloc.h>
@@ -102,6 +102,20 @@ void search(){
     }
 
 }
+void count(){
+    node *t;
+    int c=0;
+    t=head;
+    if(head==NULL){
+        printf("List is empty\n");
+        return;
+    }
+    while(t!=NULL){
+        c++;
+        t=t->next;
+    }
+    printf("Count of nodes is %d\n",c);
+}
 void display(){
     node *t;
     t=head;
@@ -143,10 +157,8 @@ void insertpoly(){
         while(t->next!=NULL){
             t=t->next;
 }
-        t->next=(poly*)malloc(sizeof(poly));
-        t->next->coeff=c;
-        t->next->pow=p;
-        t->next->next=NULL;
+        t->next=newnode;
+       
     }
     
 
@@ -157,24 +169,62 @@ void poly_display(){
     t=start;
     while(t!=NULL){
         printf("%dx^%d",t->coeff,t->pow);
+        if(t->next != NULL){
+            printf(" + ");
+        }
         t=t->next;
 
     }
+    printf("\n");
 
 }
 
+int choice(){
+    int ch;
+    printf("\nEnter your choice \n1.insert\n2.delete\n3.display\n4.sort\n5.search and replace\n6.polynomial repersentation\n7.display polynomial\n8.count of nodes\n9.exit\n");
+    scanf("%d",&ch);
+    return ch;
+}
 
+void menu(){
+    int c,e;
+    for(c=choice();c!=9;c=choice()){
+        switch(c){
+            case 1:
+              printf("Enter the element to insert\n");
+              scanf("%d",&e);
+              insert(e);
+              break;
+            case 2:
+             deletion();
+             break;
+            case 3:
+             display();
+             break;
+            case 4:
+             sort();
+             break;
+            case 5:
+             search();
+             break;
+            case 6:
+             insertpoly();
+             break;
+            case 7:
+             poly_display();
+             break;
+            case 8:
+             count();
+             break;
+            case 9:
+             break;
+            default:
+             printf("Invalid choice\n"); 
+        }
+    }
+}
 
 int main(){
-    insert(6);
-    insert(3);
-    insert(5);
-    insert(1);
-    deletion();
-    display();
-    sort(); 
-    display();
-    search();
-    display();
+    menu();
     return 0;
 }
