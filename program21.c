@@ -1,7 +1,7 @@
 /* The program used to demonstarates stack operations
     @Febin Sunny
-    Rollno: 27
-    27-07-2025
+    Rollno:27
+    18-09-2025
 */
 
 #include<stdio.h>
