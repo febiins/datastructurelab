@@ -118,7 +118,7 @@ void infixtopostfix(char infix[],char postfix[]){
     }
 
     postfix[j] = '\0';  // Null terminate
-    printf("Postfix expression is: %s\n", postfix);
+    
 }
 
 void infixtoprefix(){

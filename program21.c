@@ -19,7 +19,7 @@ void push(char a){
     }
     else{
         stack[++top]=a; // Increment top and add element
-        printf("\n%c pushed to stack\n",a);
+        
     }
 }
 
@@ -48,6 +48,7 @@ void display(){
             push(input[i]); // Otherwise, push character to stack
         }
     }
+    printf("Result is ");
     for(i=0;i<k;i++){
         printf("%c",output[i]); // Print output characters
     }
