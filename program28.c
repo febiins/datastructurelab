@@ -1,16 +1,15 @@
-/*program used to demonstrate polynomial addition
+/*program used to demonstrate polynomial substraction
 @Febin Sunny
 1-10-2025
 Rollno:27
 */
 
-
 #include<stdio.h>
 
-int a[10],b[10],c[10];     //decalring as global variable
+int a[10],b[10],c[20];             //decalring as global variable
 int degree1,degree2,maxdegree;    //decalring as global variable
 
-void display(int degree,int poly[]){  //function for disaplaying polynomial
+void display(int degree,int poly[]){    //function to display polynomial
     int i;
     for(i=degree;i>=0;i--){
         if(poly[i]==0)continue;
@@ -33,8 +32,8 @@ void display(int degree,int poly[]){  //function for disaplaying polynomial
     }
 }
 
-void read(){    //function for read the polynomial
-    int i;  
+void read(){  //function to read polynomial
+    int i;
     printf("Enter the degree of first polynomial\n");
     scanf("%d",&degree1);
     printf("Enter the degree of second polynomial\n");
@@ -57,25 +56,16 @@ void read(){    //function for read the polynomial
    display(degree2,b);
 
 }
-void sum(){  //function for add two polynomial
-    int i;
-    if(degree1>degree2){   //Find the maximum degree among both polynomials
-        maxdegree=degree1;
-    }
-    else{
-        maxdegree=degree2;
-    }
-    for(i=0;i<=maxdegree;i++){  //Add coefficients of polynomials term by term
-        int d=0,e=0;            // temporary variables to hold coefficients
-        if(i<=degree1){        // take coefficient from first polynomial if term exists
-            d=a[i];
+void mul(){   //function to multiply two polynomial
+    int i,j;
+    maxdegree=degree1+degree2;
+    for(i=0;i<=degree1;i++){ 
+        for(j=0;j<=degree2;j++){
+            c[i+j]+=a[i]*b[j];
+
         }
-        if(i<=degree2){       // take coefficient from second polynomial if term exists
-            e=b[i];
-        }
-        c[i]=d+e;             // store the sum of coefficients in result array
     }
-    printf("\n Sum is \n");
+    printf("\n Product is \n");
     display(maxdegree,c);
 
 }
@@ -83,7 +73,7 @@ void sum(){  //function for add two polynomial
 
 int main(){
     read();
-    sum();
+    mul();
     return 0;
 
 }

@@ -1,3 +1,10 @@
+/*program used to read and display polynomial 
+@Febin Sunny
+1-10-2025
+Rollno:27
+*/
+
+
 #include<stdio.h>
 int poly[20];   //decalring as global variable
 int degree;     //decalring as global variable
