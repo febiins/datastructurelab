@@ -1,4 +1,4 @@
-/*program used to demonstrate polynomial substraction
+/*program used to demonstrate polynomial multiplication
 @Febin Sunny
 1-10-2025
 Rollno:27
@@ -48,7 +48,7 @@ void read(){  //function to read polynomial
     display(degree1,a);
 
     printf("\nEnter the coefficients from constant term of second polynomial \n");
-    for(i=0;i<=degree1;i++){   //Loop iterates in such a way that it reads from constant term to degree
+    for(i=0;i<=degree2;i++){   //Loop iterates in such a way that it reads from constant term to degree
         printf("Coefficient of x^%d: ", i);
         scanf("%d",&b[i]);
     }

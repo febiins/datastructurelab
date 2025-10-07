@@ -49,7 +49,7 @@ void read(){    //function for read the polynomial
     display(degree1,a);
 
     printf("\nEnter the coefficients from constant term of second polynomial \n");
-    for(i=0;i<=degree1;i++){   //Loop iterates in such a way that it reads from constant term to degree
+    for(i=0;i<=degree2;i++){   //Loop iterates in such a way that it reads from constant term to degree
         printf("Coefficient of x^%d: ", i);
         scanf("%d",&b[i]);
     }
