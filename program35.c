@@ -1,3 +1,9 @@
+/*Program to read and display polynomial (using structure)
+@Febin Sunny 
+Roll No 27
+3-10-2025
+*/
+
 #include<stdio.h>
 #include<stdlib.h>
 
@@ -17,7 +23,11 @@ void read(){
     scanf("%d",&n);
     printf("Enter the polynomial\n");
     for(i=0;i<n;i++){
-        scanf("%d %d",&a[i].coeff,&a[i].exponen); // Read coefficient and exponent
+        printf("Term %d:\n", i + 1);
+        printf("  Coefficient: ");
+        scanf("%d", &a[i].coeff);
+        printf("  Exponent: ");
+        scanf("%d", &a[i].exponen); 
     }
 }
 
