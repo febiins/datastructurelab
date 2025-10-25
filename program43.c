@@ -18,6 +18,7 @@ void read(){
     ptr=(char*)malloc(size*sizeof(char));
 
     char ch;
+     printf("Enter the characters\n");
 
     while((ch=getchar())!='\n'){
         ptr[len++]=ch;

@@ -28,6 +28,14 @@ void implement(){
     for(int i=0;i<n;i++){
         printf("%d\t",ptr[i]);
     }
+    printf("\nEnter the elements\n");
+    for(int i=0;i<n;i++){
+        scanf("%d",&ptr[i]);
+    }
+    printf("\nprinting elements in memory(after entering elements in calloc)\n");
+    for(int i=0;i<n;i++){
+        printf("%d\t",ptr[i]);
+    }
     free(ptr);
 
 }

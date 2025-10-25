@@ -13,9 +13,10 @@ typedef struct book{
 }book;
 
 book *ptr;
+int n;
 
 void read(){
-    int n;
+    
     printf("\nEnter the number of books\n");
     scanf("%d",&n);
     getchar();
@@ -44,6 +45,7 @@ void display(){
 
 int main(){
     read();
+    display();
     return 0;
 }
 
